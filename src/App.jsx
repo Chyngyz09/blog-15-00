@@ -1,34 +1,26 @@
+import { Route, Routes } from "react-router-dom";
+
 import "./App.css";
-import Footer from "./components/Footer/Footer";
 
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
+import HomePage from "./pages/Home/HomePage";
+import AboutPage from "./pages/AboutMe/AboutPage";
+import ContactPage from "./pages/Contact/ContactPage";
 
 // Reactjs code snippet
 
 const App = () => {
-
-  const a = 20;
-
-  const b = 20;
-
-
-  // найдите как получить дату и время, также часовой пояс
-
-  const total = a + b;
-
-  const name = "Akram"
-
-  const surname = "Khalilov"
-
-  // создать Компоненты: Main, Footer и импортировать их в App.jsx
-  // так же отобразить
-
   return (
     <div className="App">
-      <Header a={a} b={b} total={total} name={name} />
-      <Main />
-      <Footer />
+      
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} /> 
+      </Routes>
+
     </div>
   );
 };

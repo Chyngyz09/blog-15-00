@@ -1,17 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 
 const Header = () => {
+
   // props = object
+
+  // react-router-dom позволит сделать запрос на JSX
+
+  // <a> - запрашивает новый HTML файл и этот тег не умеет работать с jsx
 
   return (
     <header>
       <nav>
-        <a href="">Главная</a>
-        <a href="../createpost.jsx">Обо мне</a>
-        <a href="">Контакты</a>
-
-        <Link>About me</Link>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About me</Link>
+        <Link to='/contact'>Contact</Link>
       </nav>
     </header>
   );

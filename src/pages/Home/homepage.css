@@ -1,0 +1,8 @@
+.course {
+    width: 30%;
+    height: 200px;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+    background: blue;
+}
